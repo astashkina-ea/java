@@ -8,26 +8,26 @@ public class Main {
 
         // Примитивные типы данных
         // 1. Целочисленные типы данных
-        byte varByte = 10; //  8bit   -128 ... 127   2^(bits -1)
-        short varShort = 10; //  16bit -32768 ... 32767
-        int varInt = 10; //* 32bit -2147483648 ... 2147483647
-        long varLong = 10L; // 64 bit -2^63 ... 2^63-1
+        byte varByte = 10; // 0 8bit   -128 ... 127   2^(bits -1)
+        short varShort = 10; // 0 16bit -32768 ... 32767
+        int varInt = 10; //* 0 32bit -2147483648 ... 2147483647
+        long varLong = 10L; // 0L 64 bit -2^63 ... 2^63-1
 
         varInt = varByte; //преобразование меньшего к большему
         varInt = (int) varLong; //преобразование большего к меньшему (будет потеря данных, если в varLong лежит большое число)
 
         // 2. Числа с плавающей точкой (арифметика с этими типами данных не точная. для вычислений лучше не использовать, только для хранения данных)
-        float varFloat = 1.2F; // 32bit
-        double varDouble = 1.2; //* 64 bit
+        float varFloat = 1.2F; // 0.0f 32bit
+        double varDouble = 1.2; //* 0.0d 64 bit
 
         // 3. Символьный тип
-        char varChar = 'a';
+        char varChar = 'a'; //'\u0000'
 
         // 4. логический тип
-        boolean varBoolean = true; //*
+        boolean varBoolean = true; //* false
 
         //  Ссылочные (объектные)
-        String s = "Hello, world!";
+        String s = "Hello, world!"; //null
         Phone pixel = new Phone();
         pixel.printName();
 
