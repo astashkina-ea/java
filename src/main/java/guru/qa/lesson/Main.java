@@ -98,8 +98,67 @@ public class Main {
 
         }
 
+        // Wrapper types
+        Integer aIntegerWrapper;// int
+        Double aDoubleWrapper;
+        Character aCharWrapper; // char
+
+        switch (s) {
+            case "dima": {
+                System.out.println("Thats Dima");
+                break;
+            }
+            case "vasya": {
+                System.out.println("Thats Vasya");
+            }
+            default: {
+                System.out.println("Default");
+            }
+        }
         int res = calculate(10, 20);
 
+//Значение num равняется восьми и именно оно указано для сравнения после слова switch.
+//Выполнится блок кода case 8:, так как именно там значения совпадут.
+        int num = 8;
+        switch(num){
+
+            case 1:
+                System.out.println("число равно 1");
+                break;
+            case 8:
+                System.out.println("число равно 8");
+                num++;
+                break;
+            case 9:
+                System.out.println("число равно 9");
+                break;
+            default:
+                System.out.println("число не равно 1, 8, 9");
+        }
+
+//Также можно определить несколько значений для одного блока case. Код будет выполнен при совпадении с одним из значений.
+//Есть возможность добавить блок,
+//который будет выполнен в любом случае, даже если совпадения не найдутся.
+//Такой блок указывается после ключевого слова default.
+        int num1 = 3;
+        int output = 0;
+        switch(num1){
+
+            case 1:
+                output = 3;
+                break;
+            case 2:
+            case 3:
+            case 4:
+                output = 6;
+                break;
+            case 5:
+                output = 12;
+                break;
+            default:
+                output = 24;
+        }
+        System.out.println(output);
     }
 
     public static int calculate(int a, int b) { //сигнатура метода
